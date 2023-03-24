@@ -5,7 +5,11 @@ import ru.tinkoff.edu.java.linkParser.results.ParseResult;
 
 public class DefaultURLParser implements URLParser{
     @Override
-    public ParseResult check(@NotNull String url) {
+    public ParseResult parse(@NotNull String url) {
         return null;
+    }
+    @Override
+    public String toString() {
+        return "[DefaultURLParser]";
     }
 }

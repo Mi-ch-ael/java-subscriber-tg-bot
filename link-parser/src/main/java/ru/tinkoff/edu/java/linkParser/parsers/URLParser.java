@@ -4,5 +4,5 @@ import org.jetbrains.annotations.NotNull;
 import ru.tinkoff.edu.java.linkParser.results.ParseResult;
 
 public interface URLParser {
-    ParseResult check(@NotNull String url);
+    ParseResult parse(@NotNull String url);
 }

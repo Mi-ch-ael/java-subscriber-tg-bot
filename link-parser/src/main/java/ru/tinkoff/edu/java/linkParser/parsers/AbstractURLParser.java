@@ -5,4 +5,8 @@ public abstract class AbstractURLParser implements URLParser{
     public void setNext(URLParser next) {
         this.next = next;
     }
+    @Override
+    public String toString() {
+        return "[%s] -> ".formatted(this.getClass().getSimpleName()) + this.next;
+    }
 }
