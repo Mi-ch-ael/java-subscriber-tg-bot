@@ -1,5 +1,6 @@
 app:
   test: testtest
+  githubBaseUrl: https://api.github.com/repos
 springdoc:
   swagger-ui:
     path: /swagger-ui
