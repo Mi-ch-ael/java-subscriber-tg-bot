@@ -4,10 +4,10 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpClientErrorException;
-import ru.tinkoff.edu.java.scrapper.controllers.dto.AddLinkRequest;
-import ru.tinkoff.edu.java.scrapper.controllers.dto.LinkResponse;
-import ru.tinkoff.edu.java.scrapper.controllers.dto.ListLinksResponse;
-import ru.tinkoff.edu.java.scrapper.controllers.dto.RemoveLinkRequest;
+import ru.tinkoff.edu.java.scrapper.dto.AddLinkRequest;
+import ru.tinkoff.edu.java.scrapper.dto.LinkResponse;
+import ru.tinkoff.edu.java.scrapper.dto.ListLinksResponse;
+import ru.tinkoff.edu.java.scrapper.dto.RemoveLinkRequest;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package ru.tinkoff.edu.java.scrapper.controllers.dto;
+package ru.tinkoff.edu.java.scrapper.dto;
 
 import org.jetbrains.annotations.NotNull;
 
