@@ -1,4 +1,4 @@
-package ru.tinkoff.edu.java.bot.controllers.dto;
+package ru.tinkoff.edu.java.bot.dto;
 
 import org.jetbrains.annotations.NotNull;
 
