@@ -1,4 +1,4 @@
-package ru.tinkoff.edu.java.scrapper.services;
+package ru.tinkoff.edu.java.scrapper.clients;
 
 
 import org.springframework.web.bind.annotation.PathVariable;

@@ -5,4 +5,8 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.boot.context.properties.*;
 @Validated
 @ConfigurationProperties(prefix = "app", ignoreUnknownFields = false)
-public record ApplicationConfig(@NotNull String test, @NotNull String githubBaseUrl) {}
+public record ApplicationConfig(
+        @NotNull String test,
+        @NotNull String githubBaseUrl,
+        @NotNull String stackoverflowBaseUrl
+        ) {}
