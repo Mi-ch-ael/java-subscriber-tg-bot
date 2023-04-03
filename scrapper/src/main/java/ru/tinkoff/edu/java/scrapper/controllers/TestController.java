@@ -30,6 +30,11 @@ public class TestController {
         return res;
     }
 
+    @GetMapping(path = "/schedule-debug")
+    public void scheduleInfo() {
+        System.out.println(beanFactory.getBean("schedulerIntervalMs"));
+    }
+
     @GetMapping(path = "/{id}")
     public StackoverflowResponse test2(@PathVariable String id) {
         System.out.println("About to send request to Stackoverflow");
