@@ -3,8 +3,13 @@ package ru.tinkoff.edu.java.bot.sdkwrapper;
 import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.model.Update;
 import com.pengrad.telegrambot.request.SendMessage;
+import ru.tinkoff.edu.java.bot.clients.ScrapperClient;
 
 public class HelpCommand extends AbstractCommand{
+    public HelpCommand(ScrapperClient client) {
+        super(client);
+    }
+
     @Override
     public String commandText() {
         return "/help";
