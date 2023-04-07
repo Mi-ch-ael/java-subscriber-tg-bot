@@ -18,14 +18,17 @@ import java.util.stream.Collectors;
 
 @RestControllerAdvice
 public class ScrapperExceptionHandler {
-    private static final Map<HttpStatus, String> errorDescriptions = Map.of(
-            HttpStatus.BAD_REQUEST, "Некорректные параметры запроса",
-            HttpStatus.NOT_FOUND, "Чат не существует",
-            HttpStatus.INTERNAL_SERVER_ERROR, "Внутренняя ошибка сервера"
+    private static final Map<Class<? extends Exception>, String> errorDescriptions = Map.of(
+            HttpMessageNotReadableException.class, "Синтаксическая ошибка в запросе",
+            MethodArgumentTypeMismatchException.class, "Неверный тип переданного аргумента",
+            MissingServletRequestParameterException.class, "Отсутствует обязательный аргумент",
+            HttpMediaTypeNotSupportedException.class, "Неверный тип передаваемых в запросе данных",
+            HttpClientErrorException.NotFound.class, "Запрашиваемый объект не найден",
+            Exception.class, "Внутренняя ошибка сервера"
     );
     private static ApiErrorResponse createResponse(HttpStatus status, Exception exception) {
         return new ApiErrorResponse(
-                errorDescriptions.get(status),
+                errorDescriptions.get(exception.getClass()),
                 status.toString(),
                 exception.getClass().getSimpleName(),
                 exception.getMessage(),
