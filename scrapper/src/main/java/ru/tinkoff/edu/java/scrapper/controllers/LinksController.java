@@ -13,7 +13,10 @@ import java.util.List;
 public class LinksController {
     @GetMapping(produces = "application/json")
     public ListLinksResponse getWatchedLinks(@RequestParam long chatId) {
-        return new ListLinksResponse(List.of(), 0);
+        return new ListLinksResponse(List.of(
+                new LinkResponse(5454L, "https://github.com/moevm/adfmp1h23-city-game"),
+                new LinkResponse(545L, "https://github.com/Mi-ch-ael/bridge-finder")
+        ), 2);
     }
 
     @PostMapping(consumes = "application/json", produces = "application/json")

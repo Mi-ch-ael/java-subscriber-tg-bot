@@ -17,7 +17,7 @@ public class ClientConfiguration {
     }
     @Bean
     @Scope(value = "prototype")
-    ScrapperClient scrapperClient() {
+    public ScrapperClient scrapperClient() {
         WebClient webClient = WebClient.builder().baseUrl(applicationConfig.scrapperBaseUrl()).build();
         HttpServiceProxyFactory httpServiceProxyFactory = HttpServiceProxyFactory
                 .builder(WebClientAdapter.forClient(webClient))
@@ -26,7 +26,7 @@ public class ClientConfiguration {
     }
     @Bean
     @Scope(value = "prototype")
-    ScrapperClient scrapperClient(@NotNull String baseUrl) {
+    public ScrapperClient scrapperClient(@NotNull String baseUrl) {
         WebClient webClient = WebClient.builder().baseUrl(baseUrl).build();
         HttpServiceProxyFactory httpServiceProxyFactory = HttpServiceProxyFactory
                 .builder(WebClientAdapter.forClient(webClient))

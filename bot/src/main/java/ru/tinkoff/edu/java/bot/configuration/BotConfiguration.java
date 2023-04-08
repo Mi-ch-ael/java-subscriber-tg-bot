@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import ru.tinkoff.edu.java.bot.clients.ScrapperClient;
-import ru.tinkoff.edu.java.bot.sdkwrapper.Bot;
+import ru.tinkoff.edu.java.bot.telegram.bot.Bot;
 
 @Configuration
 public class BotConfiguration {

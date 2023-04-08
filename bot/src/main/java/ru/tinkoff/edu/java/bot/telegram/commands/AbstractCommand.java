@@ -1,4 +1,4 @@
-package ru.tinkoff.edu.java.bot.sdkwrapper;
+package ru.tinkoff.edu.java.bot.telegram.commands;
 
 import org.jetbrains.annotations.NotNull;
 import ru.tinkoff.edu.java.bot.clients.ScrapperClient;

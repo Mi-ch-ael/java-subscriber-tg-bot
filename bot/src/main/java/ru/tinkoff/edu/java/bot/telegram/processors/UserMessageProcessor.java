@@ -1,8 +1,9 @@
-package ru.tinkoff.edu.java.bot.sdkwrapper;
+package ru.tinkoff.edu.java.bot.telegram.processors;
 
 import com.pengrad.telegrambot.model.Update;
 import com.pengrad.telegrambot.request.SendMessage;
 import org.jetbrains.annotations.NotNull;
+import ru.tinkoff.edu.java.bot.telegram.commands.Command;
 
 import java.util.List;
 
@@ -15,7 +16,7 @@ public class UserMessageProcessor {
         }
         this.firstCommand = orderedCommands.get(0);
     }
-    SendMessage process(Update update) {
+    public SendMessage process(Update update) {
         return this.firstCommand.handle(update);
     }
 }
