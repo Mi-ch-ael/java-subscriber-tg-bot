@@ -1,5 +1,9 @@
 app:
   test: testtest
+  token: ${TOKEN}
+  scrapperBaseUrl: http://localhost:8080
+server:
+  port: 8090
 springdoc:
   swagger-ui:
     path: /swagger-ui
